@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pocket DM</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= javascript_pack_tag 'Index' %>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="leftColumn">
+          <div class="logo"><image ref="ran.png" alt="i broked">
+          </div>
+
+          <div class="menu">
+              <h3> Link Menu</h3>
+              <Link to= "/campaigns"
+              id="campBtn">Campaigns</Link>
+              {/* <Link to="/characters" id="charBtn">Characters</Link>
+              <Link to="/battleBtn"
+              id="battleSim">Battle Simulator</Link> */}
+          </div>
+      </div>
+
+      # {/* this is how the app will look before login */}
+      <div class="rightColumn"> 
+          <div class="titleCard">
+              <div>
+                  <form>                    
+                      <div class="unDiv">
+                          <label for="name">Username:</label>
+                          <input type="text" name="name" id="name" required /> 
+                      </div>
+
+                      <div class="pwDiv">
+                          <label for="password" name="pass" id="pass" required>Password:</label><input type="text" name="passw" id="passw" required />
+                      </div>
+
+                      <div class="submitDiv">
+                          <input type="submit" id="login">Login</input>
+                      </div>
+                  </form>
+              </div>
+          </div>
+
+          <div class="view">
+              <h4 class ="campList"> Campaigns </h4>
+              
+              <p class="summary">Clicking campaign will toggle to the campaign collection page, where a user can either select a campaign to view, edit, delete, or create a campaign. 
+              </p>
+
+              <Link to="/campaigns/create" class="campCrt" role="button">Create A Campaign 
+              </Link>
+              # {/* this should prompt a user to login */}
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

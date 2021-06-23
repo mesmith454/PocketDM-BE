@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  party: MyString
+  level: 1
+  campaign_notes: MyText
+  dm_notes: MyText
+
+two:
+  title: MyString
+  party: MyString
+  level: 1
+  campaign_notes: MyText
+  dm_notes: MyText
